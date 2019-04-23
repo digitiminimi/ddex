@@ -16,11 +16,18 @@ module DDEX
     autoload :V38,  "ddex/ern/v38"
     autoload :V381,  "ddex/ern/v381"
     autoload :V382,  "ddex/ern/v382"
+    autoload :V41,  "ddex/ern/v41"
 
     ROOT_ELEMENT = "NewReleaseMessage".freeze
     VERSION_ATTR = "MessageSchemaVersionId".freeze
 
     DEFAULT_CONFIG  = {
+      "V41" => {
+        :schema => "http://ddex.net/xml/ern/41/release-notification.xsd",
+        :version => "4.1",
+        :message_schema_version_id => "ern/41"
+      },
+
       "V382" => {
         :schema => "http://ddex.net/xml/ern/382/release-notification.xsd",
         :version => "3.8.2",
